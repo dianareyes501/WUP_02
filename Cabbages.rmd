@@ -1,7 +1,7 @@
 ---
 title: "Cabbages"
 author: "Diana Reyes"
-date: "October 30, 202"
+date: "October 30, 2020"
 output:
   html_document:
     df_print: paged
@@ -25,6 +25,8 @@ veggy <- cabbages
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
+
+
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
@@ -33,16 +35,32 @@ veggy <- cabbages
 
 ### Graphical Descriptive Results
 
+```{r}
+boxplot(VitC ~ Cult,data=veggy)
+```
+
+
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ### Numerical Descriptive Results
+
+```{r}
+
+```
+
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ## Inferential Results
 
-<!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
+```{r}
+favstats(VitC ~ Cult,data=veggy)
+```
 
+<!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
+$H_A$ The null hypothesis consists of there not being a difference VitC between c39 and c52 cultivation methods.
+
+$H_A$ The Alternative hypothesis is that there is in face a difference VitC between c39 and c52 cultivation methods.
 
 # Discussion and Conclusion
 
